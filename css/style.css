@@ -415,7 +415,7 @@ font-family: "Oswald", sans-serif; */
 
 .question {
   padding-top: 150px;
-  padding-bottom: 150px;
+  padding-bottom: 80px;
   margin: 0 auto;
 }
 
@@ -476,7 +476,7 @@ font-family: "Oswald", sans-serif; */
 }
 
 .partners {
-  padding-top: 150px;
+  padding-top: 130px;
   padding-bottom: 80px;
   background-color: var(--dark-color);
 }
@@ -512,5 +512,130 @@ font-family: "Oswald", sans-serif; */
   .partners__item:nth-child(5n) {
     margin-right: 10px;
     margin-left: 10px;
+  }
+}
+
+.reviews {
+  padding: 150px 0;
+}
+
+.reviews__h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.reviews__grid-item {
+}
+.reviews__card {
+  background-color: #f7f7f7;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.reviews__quotes {
+  color: var(--accent-color);
+  font-size: 96px;
+  line-height: 1;
+  margin-bottom: -40px;
+}
+.reviews__author-accent {
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 1280px) {
+  .reviews {
+    padding: 100px 15px;
+  }
+  .reviews__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reviews__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.contacts {
+  padding: 100px 0 150px;
+}
+
+.contacts__h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.contacts__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.contacts__item {
+  max-width: 255px;
+  text-align: center;
+  margin: 0 auto 15px;
+}
+.contacts__icon {
+  margin: 0 auto 13px;
+  width: 50px;
+  height: 50px;
+}
+
+.contacts__h3 {
+  text-transform: uppercase;
+}
+.contacts__h3-grey {
+  color: var(--gray-color);
+  margin-bottom: 18px;
+}
+.contacts__h3-accent {
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 1280px) {
+  .contacts__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contacts__item {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contacts__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .contacts__item {
+    max-width: 100%;
+  }
+}
+
+.footer {
+  padding: 30px 0;
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_copyright {
+}
+.footer_brand {
+}
+
+@media screen and (max-width: 1280px) {
+  .footer {
+    padding: 30px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer__flex {
+    flex-direction: column;
   }
 }
