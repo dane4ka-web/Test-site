@@ -10,19 +10,50 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/img/logo.svg" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- <ul id="slide-out" class="sidenav">
+      <li>
+        <a href="#!"><i class="material-icons">home</i>Главная</a>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">people</i>О нас</a>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">grade</i>Услуги</a>
+      </li>
+      <li>
+        <a href="#!"><i class="material-icons">phone</i>Контакты</a>
+      </li>
+      <li>
+        <a href="#!" class="sidenav-close"
+          ><i class="material-icons">close</i>Закрыть</a
+        >
+      </li>
+
+      <li><div class="divider"></div></li>
+    </ul>
+    <!-- <a href="#" data-target="slide-out" class="sidenav-trigger"
+      ><i class="material-icons">menu</i></a
+    > --> -->
+
     <header class="header">
       <div class="container">
         <div class="header__title">
           <img src="img/logo.svg" alt="logo" class="logo" />
-          <button class="burger">
+          <a class="burger sidenav-trigger" data-target="slide-out">
             <!--alt + shift и стрелка вниз - делает копию тега-->
             <span class="burger__line"></span>
             <span class="burger__line"></span>
             <span class="burger__line"></span>
-          </button>
+          </a>
         </div>
         <h1 class="main__title">Реализуем крупнейшие проекты в России</h1>
         <h4 class="h4">Стадионы, газопроводы, мосты, дамбы</h4>
@@ -92,6 +123,22 @@
         </div>
       </div>
     </section>
+    <!-- Modal Trigger -->
+
+    <!-- Modal Structure -->
+    <!-- <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a
+          href="#!"
+          class="modal-close waves-effect waves-green btn-flat modal-trigger"
+          >Agree</a
+        >
+      </div> -->
+    </div>
     <section class="request">
       <div class="container">
         <div class="request__flex">
@@ -101,11 +148,11 @@
               РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!
             </h5>
           </div>
-          <div class="request__flex-right">
-            <button class="request__btn">
+          <div class="request__flex-right" href="#modal1">
+            <a class="request__btn modal-trigger">
               <img src="img/envelop.svg" alt="envelope" class="request__icon" />
               Ваш запрос
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -173,10 +220,10 @@
       <div class="container">
         <h2 class="text-h2 section__h2">Ответы на вопросы</h2>
         <div class="question_items">
-          <div class="question_item">
-            <h3 class="text-h3 question_h3 close">
+          <details class="question_item">
+            <summary class="text-h3 question_h3">
               Работаете ли вы по 249 фз?
-            </h3>
+            </summary>
             <p class="text-p question_p">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
@@ -184,21 +231,11 @@
               печатник создал большую коллекцию размеров и форм шрифтов,
               используя Lorem Ipsum для распечатки образцов.
             </p>
-          </div>
-          <div class="question_item">
-            <h3 class="text-h3 question_h3 open">Работаете ли вы по 249 фз?</h3>
-            <p class="text-p question_p">
-              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-              вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
-              на латинице с начала XVI века. В то время некий безымянный
-              печатник создал большую коллекцию размеров и форм шрифтов,
-              используя Lorem Ipsum для распечатки образцов.
-            </p>
-          </div>
-          <div class="question_item">
-            <h3 class="text-h3 question_h3 close">
+          </details>
+          <details class="question_item">
+            <summary class="text-h3 question_h3">
               Работаете ли вы по 249 фз?
-            </h3>
+            </summary>
             <p class="text-p question_p">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
@@ -206,11 +243,11 @@
               печатник создал большую коллекцию размеров и форм шрифтов,
               используя Lorem Ipsum для распечатки образцов.
             </p>
-          </div>
-          <div class="question_item">
-            <h3 class="text-h3 question_h3 close">
+          </details>
+          <details class="question_item">
+            <summary class="text-h3 question_h3">
               Работаете ли вы по 249 фз?
-            </h3>
+            </summary>
             <p class="text-p question_p">
               Lorem Ipsum - это текст-"рыба", часто используемый в печати и
               вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
@@ -218,7 +255,19 @@
               печатник создал большую коллекцию размеров и форм шрифтов,
               используя Lorem Ipsum для распечатки образцов.
             </p>
-          </div>
+          </details>
+          <details class="question_item">
+            <summary class="text-h3 question_h3">
+              Работаете ли вы по 249 фз?
+            </summary>
+            <p class="text-p question_p">
+              Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+              вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов
+              на латинице с начала XVI века. В то время некий безымянный
+              печатник создал большую коллекцию размеров и форм шрифтов,
+              используя Lorem Ipsum для распечатки образцов.
+            </p>
+          </details>
         </div>
       </div>
     </section>
@@ -331,8 +380,8 @@
             <img src="img/phone-icon.svg" alt="" class="contacts__icon" />
             <h3 class="text-h3 contacts__h3 contacts__h3-grey">Телефон:</h3>
             <h3 class="text-h3 contacts__h3">
-              8 (812) 111-22-33 <br />
-              8 (812) 111-22-33
+              <a href="tel:+78121112233">8 (812) 111-22-33</a><br />
+              <a href="tel:+78121112233">8 (812) 111-22-33</a>
             </h3>
           </div>
           <div class="contacts__item">
@@ -349,7 +398,7 @@
             <img src="img/mail-icon.svg" alt="" class="contacts__icon" />
             <h3 class="text-h3 contacts__h3 contacts__h3-grey">E-MAIL:</h3>
             <h3 class="text-h3 contacts__h3 contacts__h3-accent">
-              INFO@VIP.RU
+              <a href="mailto:dmitr@gmail.com">INFO@VIP.RU</a>
             </h3>
           </div>
         </div>
@@ -365,5 +414,7 @@
         </div>
       </div>
     </footer>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
   </body>
 </html>
